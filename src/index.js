@@ -2,19 +2,16 @@ const express = require('express');
 const connect = require('./config/database');
 const app = express();
 
-const TweetRepository= require( './repository/tweet-repository');
-const Comment = require('./models/comment');
+// const HashtagRepository = require('./repository/hashtag-repository');
+// const TweetService = require('./services/tweet-service');
 
 app.listen(3000, async () =>{
     console.log('listening on port 3000');
     await connect();
     console.log('Mongo connected');
-
-    const tweetRepo = new TweetRepository();
-    // const tweet = await tweetRepo.create({content: ' Tweet with comment',});
-    // console.log(tweet);
-    // const comment = await Comment.create({content: 'Third Comment'});
-    // tweet.comments.push(comment);
-    // await tweet.save();  
-    // console.log(tweet);
+    // let service = new TweetService();
+    // const tweet = await service.create({
+    //     content : 'my #working twitter'
+    // });
+    // console.log(tweet);  working, uncomment to checking hashtag processing
 });
