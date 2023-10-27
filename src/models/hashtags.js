@@ -4,7 +4,7 @@ const hashtagSchema = new mongoose.Schema({
   title: {
       type: String,
       required: true,
-      unique: true
+      unique: true //avoid duplicates and enhance search speed
   }, 
   tweets: [
       {
