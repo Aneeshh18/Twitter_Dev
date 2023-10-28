@@ -24,7 +24,7 @@ class LikeService {
         if(exists) {
             likeable.likes.pull(exists.id);
             await likeable.save();
-            await exists.deleteOne();//remove()<- not a fun//todo
+            await exists.deleteOne();//remove()<- not a fun//deprecated
             var isAdded = false;
         } else {
             const newLike = await this.likeRepository.create({
