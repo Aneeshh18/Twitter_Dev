@@ -6,7 +6,7 @@ export const authenticate = (req, res, next) => {
         if(!user) {
             return res.status(401).json({
                 message: 'Unauthorised access no token'
-            });
+            })
         }
         req.user = user;
         next();
